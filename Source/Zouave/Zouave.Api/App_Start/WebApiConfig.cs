@@ -17,7 +17,7 @@ namespace Zouave.Api
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
+                defaults: new { controller="Test",id = RouteParameter.Optional }
             );
         }
     }
