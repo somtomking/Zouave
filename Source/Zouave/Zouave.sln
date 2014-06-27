@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zouave.Admin", "Zouave.Admi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zouave.Web.Framework", "Zouave.Web.Framework\Zouave.Web.Framework.csproj", "{E8350817-C91D-4740-9202-03BB7FFEADBF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{492D33C0-91F6-4E4F-8E3C-B62333582E18}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E8350817-C91D-4740-9202-03BB7FFEADBF} = {492D33C0-91F6-4E4F-8E3C-B62333582E18}
+		{30A11ECE-D974-4872-B588-5268A969E4A5} = {492D33C0-91F6-4E4F-8E3C-B62333582E18}
+		{73D8E699-5BB9-416B-8CF5-E5342B3EEFDA} = {492D33C0-91F6-4E4F-8E3C-B62333582E18}
 	EndGlobalSection
 EndGlobal
