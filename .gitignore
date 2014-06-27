@@ -1,0 +1,10 @@
+﻿################################################################################
+# 此 .gitignore 文件已由 Microsoft(R) Visual Studio 自动创建。
+################################################################################
+
+/Source/Zouave/Zouave.Admin/bin
+/Source/Zouave/Zouave.Admin/obj/Debug
+*.user
+/Source/Zouave/Zouave.Web/bin
+/Source/Zouave/Zouave.Web/obj/Debug
+/Source/Zouave/Zouave.Web.Framework/obj/Debug
