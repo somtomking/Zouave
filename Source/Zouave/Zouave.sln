@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zouave.Web", "Zouave.Web\Zouave.Web.csproj", "{30A11ECE-D974-4872-B588-5268A969E4A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zouave.Admin", "Zouave.Admin\Zouave.Admin.csproj", "{73D8E699-5BB9-416B-8CF5-E5342B3EEFDA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{30A11ECE-D974-4872-B588-5268A969E4A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30A11ECE-D974-4872-B588-5268A969E4A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30A11ECE-D974-4872-B588-5268A969E4A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73D8E699-5BB9-416B-8CF5-E5342B3EEFDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73D8E699-5BB9-416B-8CF5-E5342B3EEFDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73D8E699-5BB9-416B-8CF5-E5342B3EEFDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73D8E699-5BB9-416B-8CF5-E5342B3EEFDA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
