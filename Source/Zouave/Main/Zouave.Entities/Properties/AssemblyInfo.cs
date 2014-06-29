@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // 有关程序集的常规信息通过以下
 // 特性集控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("Zouave.Framework")]
+[assembly: AssemblyTitle("Zouave.Entities")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Zouave.Framework")]
+[assembly: AssemblyProduct("Zouave.Entities")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
-[assembly: Guid("34c742ae-78d3-4351-80dc-f1840f3fa2c0")]
+[assembly: Guid("d3ee0430-53c6-4105-8c1c-a8ad9af8ffaa")]
 
 // 程序集的版本信息由下面四个值组成: 
 //
