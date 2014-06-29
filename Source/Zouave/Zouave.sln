@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zouave.Services", "Main\Zou
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zouave.Entities", "Main\Zouave.Entities\Zouave.Entities.csproj", "{9E986D4F-1806-4127-878D-6808229148B6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zouave.Data", "Main\Zouave.Data\Zouave.Data.csproj", "{012EA80C-6975-47D1-AD12-1166B542712E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{9E986D4F-1806-4127-878D-6808229148B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E986D4F-1806-4127-878D-6808229148B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E986D4F-1806-4127-878D-6808229148B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{012EA80C-6975-47D1-AD12-1166B542712E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{012EA80C-6975-47D1-AD12-1166B542712E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{012EA80C-6975-47D1-AD12-1166B542712E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{012EA80C-6975-47D1-AD12-1166B542712E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
