@@ -43,6 +43,25 @@
     <Compile Include="Entity\Users\User.cs" />
     <Compile Include="Helper\ConfigHelper.cs" />
     <Compile Include="Helper\FormatHelper.cs" />
+    <Compile Include="Helper\ReflectionHelper.cs" />
+    <Compile Include="Helper\FastReflectionLib\ConstructorInvoker.cs" />
+    <Compile Include="Helper\FastReflectionLib\ConstructorInvokerCache.cs" />
+    <Compile Include="Helper\FastReflectionLib\ConstructorInvokerFactory.cs" />
+    <Compile Include="Helper\FastReflectionLib\FastReflectionCache.cs" />
+    <Compile Include="Helper\FastReflectionLib\FastReflectionCaches.cs" />
+    <Compile Include="Helper\FastReflectionLib\FastReflectionExtensions.cs" />
+    <Compile Include="Helper\FastReflectionLib\FastReflectionFactories.cs" />
+    <Compile Include="Helper\FastReflectionLib\FieldAccessor.cs" />
+    <Compile Include="Helper\FastReflectionLib\FieldAccessorCache.cs" />
+    <Compile Include="Helper\FastReflectionLib\FieldAccessorFactory.cs" />
+    <Compile Include="Helper\FastReflectionLib\IFastReflectionCache.cs" />
+    <Compile Include="Helper\FastReflectionLib\IFastReflectionFactory.cs" />
+    <Compile Include="Helper\FastReflectionLib\MethodInvoker.cs" />
+    <Compile Include="Helper\FastReflectionLib\MethodInvokerCache.cs" />
+    <Compile Include="Helper\FastReflectionLib\MethodInvokerFactory.cs" />
+    <Compile Include="Helper\FastReflectionLib\PropertyAccessor.cs" />
+    <Compile Include="Helper\FastReflectionLib\PropertyAccessorCache.cs" />
+    <Compile Include="Helper\FastReflectionLib\PropertyAccessorFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

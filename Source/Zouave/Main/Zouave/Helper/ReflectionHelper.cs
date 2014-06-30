@@ -3,17 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Configuration;
- 
+using FastReflectionLib;
 namespace Zouave.Helper
 {
-    /// <summary>
-    /// *.Config 帮助类
-    /// </summary>
-    public class ConfigHelper
+    public class ReflectionHelper
     {
-
-
        
     }
 }
