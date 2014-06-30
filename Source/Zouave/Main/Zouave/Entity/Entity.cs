@@ -8,7 +8,7 @@ namespace Zouave.Entity
 {
     public class Entity
     {
-        public int Id { get;get; }
+        public int Id { get;set; }
 
     }
 
