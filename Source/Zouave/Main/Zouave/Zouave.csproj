@@ -43,6 +43,7 @@
     <Compile Include="Entity\Users\User.cs" />
     <Compile Include="Helper\ConfigHelper.cs" />
     <Compile Include="Helper\FormatHelper.cs" />
+    <Compile Include="Helper\PinyinHelper.cs" />
     <Compile Include="Helper\ReflectionHelper.cs" />
     <Compile Include="Helper\FastReflectionLib\ConstructorInvoker.cs" />
     <Compile Include="Helper\FastReflectionLib\ConstructorInvokerCache.cs" />
@@ -62,7 +63,9 @@
     <Compile Include="Helper\FastReflectionLib\PropertyAccessor.cs" />
     <Compile Include="Helper\FastReflectionLib\PropertyAccessorCache.cs" />
     <Compile Include="Helper\FastReflectionLib\PropertyAccessorFactory.cs" />
+    <Compile Include="Helper\RMBHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ZouaveException.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

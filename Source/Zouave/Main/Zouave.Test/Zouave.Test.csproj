@@ -53,6 +53,8 @@
   <ItemGroup>
     <Compile Include="Helper\FormatHelperTest.cs" />
     <Compile Include="Helper\ReflectionHelperTest.cs" />
+    <Compile Include="Helper\RMBHelperTest.cs" />
+    <Compile Include="Helper\UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
