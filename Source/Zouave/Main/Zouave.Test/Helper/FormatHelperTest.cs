@@ -62,9 +62,7 @@ namespace Zouave.Test.Helper
         public void FormatTest()
         {
              
-            var result = "123{0}".F("4");
-        
-            Assert.AreEqual(result, "1234");
+            
         }
     }
 }
