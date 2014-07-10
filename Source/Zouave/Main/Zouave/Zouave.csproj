@@ -44,6 +44,7 @@
     <Compile Include="Extendsions\StringExtendsion.cs" />
     <Compile Include="Helper\CommonHelper.cs" />
     <Compile Include="Helper\ConfigHelper.cs" />
+    <Compile Include="Helper\EnvironmentHelper.cs" />
     <Compile Include="Helper\FormatHelper.cs" />
     <Compile Include="Helper\PinyinHelper.cs" />
     <Compile Include="Helper\ReflectionHelper.cs" />
