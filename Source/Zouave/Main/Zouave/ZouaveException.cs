@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Zouave
-{
+{ 
     /// <summary>
     /// 框架异常基类
     /// </summary>
