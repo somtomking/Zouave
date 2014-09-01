@@ -36,6 +36,9 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Concept\IDomainObj.cs" />
+    <Compile Include="Concept\IDto.cs" />
+    <Compile Include="Concept\IViewModel.cs" />
     <Compile Include="Entity\Addresss\Address.cs" />
     <Compile Include="Entity\Common\Dictionary.cs" />
     <Compile Include="Entity\Common\Settings.cs" />
