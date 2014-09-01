@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-namespace Zouave.Entity
+using Zouave.CommonEntity.Users;
+namespace Zouave.Entity.Users
 {
-    public class Entity
+    public partial class User : UserBase
     {
-        public int Id { get;set; }
+
 
     }
 
-
+    
 }

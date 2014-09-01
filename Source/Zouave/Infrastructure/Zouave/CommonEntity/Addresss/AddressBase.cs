@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Zouave.Entity.Addresss
+namespace Zouave.CommonEntity.Addresss
 {
-    public class Address : Entity
+    public partial class AddressBase : Entity
     {
         public string CountryCode { get; set; }
         public string ProvinceCode { get; set; }

@@ -1,7 +1,7 @@
 ﻿using System;
-namespace Zouave.Entity.Common
+namespace Zouave.CommonEntity.Common
 {
-    public class Dictionary : Entity
+    public partial class DictionaryBase : Entity
     {
         public string Code { get; set; }
         public string ParentCode { get; set; }

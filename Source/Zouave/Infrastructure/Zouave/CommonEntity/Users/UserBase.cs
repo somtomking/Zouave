@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Zouave.Entity.Users
+namespace Zouave.CommonEntity.Users
 {
-    public class User : Entity
+    public partial class UserBase : Entity
     {
         public string UserName { get; set; }
         public string Email { get; set; }

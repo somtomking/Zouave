@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Zouave.Entity.Common
+namespace Zouave.CommonEntity.Common
 {
-    public class Settings : Entity
+    public partial class SettingsBase : Entity
     {
         public string Key { get; set; }
         public string Scope { get; set; }
