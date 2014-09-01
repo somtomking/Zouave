@@ -8,3 +8,7 @@
 /Source/Zouave/Zouave.Web/bin
 /Source/Zouave/Zouave.Web/obj/Debug
 /Source/Zouave/Zouave.Web.Framework/obj/Debug
+/Source/Zouave/Main/Zouave.Data/obj/Debug
+/Source/Zouave/Main/Zouave.Entity/obj/Debug
+/Source/Zouave/Main/Zouave.Services/bin/Debug
+/Source/Zouave/Main/Zouave.Services/obj/Debug
