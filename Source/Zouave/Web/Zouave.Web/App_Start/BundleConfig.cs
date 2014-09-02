@@ -8,6 +8,46 @@ namespace Zouave.Web
         // 有关绑定的详细信息，请访问 http://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
+
+            /*admin bundles start */
+
+            //ScriptBundle
+
+     
+
+            bundles.Add(new ScriptBundle("~/bundles/admin_jq").Include(
+                     "~/Areas/Admin/Content/AceAmdin/assets/js/jquery.min.js"));
+            bundles.Add(new ScriptBundle("~/bundles/admin_jq_ie").Include(
+                     "~/Areas/Admin/Content/AceAmdin/assets/js/jquery1x.min.js"));
+
+
+             bundles.Add(new ScriptBundle("~/bundles/admin_js_ie").Include(
+                     "~/Areas/Admin/Content/AceAmdin/assets/js/html5shiv.js",
+                     "~/Areas/Admin/Content/AceAmdin/assets/js/respond.min.js"
+                     ));
+
+             bundles.Add(new ScriptBundle("~/bundles/admin_jq_mobile").Include(
+            "~/Areas/Admin/Content/AceAmdin/assets/js/jquery.mobile.custom.min.js"));
+
+            //StyleBundle
+            bundles.Add(new StyleBundle("~/Content/admin_css").Include(
+              "~/Areas/Admin/Content/AceAmdin/assets/css/bootstrap.min.css",
+              "~/Areas/Admin/Content/AceAmdin/assets/css/font-awesome.min.css",
+              "~/Areas/Admin/Content/AceAmdin/assets/css/ace-fonts.css",
+              "~/Areas/Admin/Content/AceAmdin/assets/css/ace.min.css",
+              "~/Areas/Admin/Content/AceAmdin/assets/css/ace-rtl.min.css",
+              "~/Areas/Admin/Content/AceAmdin/assets/css/ace.onpage-help.css"
+              ));
+                bundles.Add(new StyleBundle("~/Content/admin_css_ie").Include(
+              "~/Areas/Admin/Content/AceAmdin/assets/css/ace-part2.min.css",
+              "~/Areas/Admin/Content/AceAmdin/assets/css/ace-ie.min.css"
+           
+            
+              ));
+
+            /*admin bundles end! */
+
+
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
 
@@ -29,7 +69,7 @@ namespace Zouave.Web
 
             // 将 EnableOptimizations 设为 false 以进行调试。有关详细信息，
             // 请访问 http://go.microsoft.com/fwlink/?LinkId=301862
-            BundleTable.EnableOptimizations = true;
+            BundleTable.EnableOptimizations = false;
         }
     }
 }

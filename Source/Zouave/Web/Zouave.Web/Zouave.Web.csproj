@@ -1792,6 +1792,7 @@
     <Content Include="Areas\Admin\Content\AceAmdin\mustache\php\vendor\Mustache\Parser.php" />
     <Content Include="Areas\Admin\Content\AceAmdin\mustache\php\vendor\Mustache\Template.php" />
     <Content Include="Areas\Admin\Content\AceAmdin\mustache\php\vendor\Mustache\Tokenizer.php" />
+    <Content Include="Areas\Admin\Views\Login\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -1828,7 +1829,6 @@
     <Folder Include="Areas\Admin\Content\AceAmdin\mustache\js\output\" />
     <Folder Include="Areas\Admin\Content\AceAmdin\mustache\php\_cache\" />
     <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="Areas\Admin\Views\Login\" />
     <Folder Include="Models\" />
     <Folder Include="Views\Login\" />
   </ItemGroup>

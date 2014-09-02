@@ -11,6 +11,7 @@ namespace Zouave.Web.Areas.Admin.Controllers
         // GET: Admin/Login
         public ActionResult Index()
         {
+            
             return View();
         }
     }
