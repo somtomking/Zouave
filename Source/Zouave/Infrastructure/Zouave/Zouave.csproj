@@ -39,11 +39,6 @@
     <Compile Include="Concept\IDomainObj.cs" />
     <Compile Include="Concept\IDto.cs" />
     <Compile Include="Concept\IViewModel.cs" />
-    <Compile Include="CommonEntity\Addresss\AddressBase.cs" />
-    <Compile Include="CommonEntity\Common\DictionaryBase.cs" />
-    <Compile Include="CommonEntity\Common\SettingsBase.cs" />
-    <Compile Include="CommonEntity\Entity.cs" />
-    <Compile Include="CommonEntity\Users\UserBase.cs" />
     <Compile Include="Extendsions\StringExtendsion.cs" />
     <Compile Include="Helper\CommonHelper.cs" />
     <Compile Include="Helper\ConfigHelper.cs" />
