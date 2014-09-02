@@ -33,10 +33,5 @@ namespace Zouave.Domain.Users
 
 
     }
-    public enum PwdFormat
-    {
-        Clear = 0,
-        Hashed = 1,
-        Encrypted = 2
-    }
+ 
 }
