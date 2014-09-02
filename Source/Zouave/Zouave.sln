@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zouave.Web", "Web\Zouave.Web\Zouave.Web.csproj", "{B2CC0C1E-15D4-4D09-8CF0-CE7A5B4D9023}"
 EndProject
@@ -20,6 +20,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zouave.Data", "Main\Zouave.Data\Zouave.Data.csproj", "{9138845C-20A5-488F-A733-8E76C90EFAC3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zouave.Entity", "Main\Zouave.Entity\Zouave.Entity.csproj", "{1BF43301-F943-48B8-904C-F5F8774CBB80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zouave.Domain", "Main\Zouave.Domain\Zouave.Domain.csproj", "{04D9DB63-9B5D-4769-86AB-F619FED93F39}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{1BF43301-F943-48B8-904C-F5F8774CBB80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1BF43301-F943-48B8-904C-F5F8774CBB80}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1BF43301-F943-48B8-904C-F5F8774CBB80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04D9DB63-9B5D-4769-86AB-F619FED93F39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04D9DB63-9B5D-4769-86AB-F619FED93F39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04D9DB63-9B5D-4769-86AB-F619FED93F39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04D9DB63-9B5D-4769-86AB-F619FED93F39}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,5 +68,6 @@ Global
 		{9B5C7960-297A-490E-8C53-942F2CD4F1E7} = {37CC1252-6A46-4CAC-B7A5-9169A88C96D9}
 		{9138845C-20A5-488F-A733-8E76C90EFAC3} = {37CC1252-6A46-4CAC-B7A5-9169A88C96D9}
 		{1BF43301-F943-48B8-904C-F5F8774CBB80} = {37CC1252-6A46-4CAC-B7A5-9169A88C96D9}
+		{04D9DB63-9B5D-4769-86AB-F619FED93F39} = {37CC1252-6A46-4CAC-B7A5-9169A88C96D9}
 	EndGlobalSection
 EndGlobal
