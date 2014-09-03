@@ -185,7 +185,7 @@ namespace Zouave.Framework
 
             if (includeQueryString)
             {
-                string storeHost = GetStoreHost(useSsl);
+                string storeHost = GetHost(useSsl);
                 if (storeHost.EndsWith("/"))
                     storeHost = storeHost.Substring(0, storeHost.Length - 1);
                 url = storeHost + _httpContext.Request.RawUrl;
@@ -252,7 +252,7 @@ namespace Zouave.Framework
         /// </summary>
         /// <param name="useSsl">Use SSL</param>
         /// <returns>Store host location</returns>
-        public virtual string GetStoreHost(bool useSsl)
+        public virtual string GetHost(bool useSsl)
         {
             var result = "";
             var httpHost = ServerVariables("HTTP_HOST");
@@ -263,67 +263,14 @@ namespace Zouave.Framework
                     result += "/";
             }
 
-            if (DataSettingsHelper.DatabaseIsInstalled())
+
+
+            if (useSsl)
             {
-                #region Database is installed
-
-                //let's resolve IWorkContext  here.
-                //Do not inject it via contructor because it'll cause circular references
-                var storeContext = EngineContext.Current.Resolve<IStoreContext>();
-                var currentStore = storeContext.CurrentStore;
-                if (currentStore == null)
-                    throw new Exception("Current store cannot be loaded");
-
-                if (String.IsNullOrWhiteSpace(httpHost))
-                {
-                    //HTTP_HOST variable is not available.
-                    //This scenario is possible only when HttpContext is not available (for example, running in a schedule task)
-                    //in this case use URL of a store entity configured in admin area
-                    result = currentStore.Url;
-                    if (!result.EndsWith("/"))
-                        result += "/";
-                }
-
-                if (useSsl)
-                {
-                    if (!String.IsNullOrWhiteSpace(currentStore.SecureUrl))
-                    {
-                        //Secure URL specified. 
-                        //So a store owner don't want it to be detected automatically.
-                        //In this case let's use the specified secure URL
-                        result = currentStore.SecureUrl;
-                    }
-                    else
-                    {
-                        //Secure URL is not specified.
-                        //So a store owner wants it to be detected automatically.
-                        result = result.Replace("http:/", "https:/");
-                    }
-                }
-                else
-                {
-                    if (currentStore.SslEnabled && !String.IsNullOrWhiteSpace(currentStore.SecureUrl))
-                    {
-                        //SSL is enabled in this store and secure URL is specified.
-                        //So a store owner don't want it to be detected automatically.
-                        //In this case let's use the specified non-secure URL
-                        result = currentStore.Url;
-                    }
-                }
-                #endregion
+                //Secure URL is not specified.
+                //So a store owner wants it to be detected automatically.
+                result = result.Replace("http:/", "https:/");
             }
-            else
-            {
-                #region Database is not installed
-                if (useSsl)
-                {
-                    //Secure URL is not specified.
-                    //So a store owner wants it to be detected automatically.
-                    result = result.Replace("http:/", "https:/");
-                }
-                #endregion
-            }
-
 
             if (!result.EndsWith("/"))
                 result += "/";
@@ -334,10 +281,10 @@ namespace Zouave.Framework
         /// Gets store location
         /// </summary>
         /// <returns>Store location</returns>
-        public virtual string GetStoreLocation()
+        public virtual string GetLocation()
         {
             bool useSsl = IsCurrentConnectionSecured();
-            return GetStoreLocation(useSsl);
+            return GetLocation(useSsl);
         }
 
         /// <summary>
@@ -345,11 +292,11 @@ namespace Zouave.Framework
         /// </summary>
         /// <param name="useSsl">Use SSL</param>
         /// <returns>Store location</returns>
-        public virtual string GetStoreLocation(bool useSsl)
+        public virtual string GetLocation(bool useSsl)
         {
             //return HostingEnvironment.ApplicationVirtualPath;
 
-            string result = GetStoreHost(useSsl);
+            string result = GetHost(useSsl);
             if (result.EndsWith("/"))
                 result = result.Substring(0, result.Length - 1);
             if (IsRequestAvailable(_httpContext))
@@ -637,7 +584,7 @@ namespace Zouave.Framework
                 bool success = TryWriteWebConfig();
                 if (!success)
                 {
-                    throw new NopException("nopCommerce needs to be restarted due to a configuration change, but was unable to do so." + Environment.NewLine +
+                    throw new ZouaveException("Zouave needs to be restarted due to a configuration change, but was unable to do so." + Environment.NewLine +
                         "To prevent this issue in the future, a change to the web server configuration is required:" + Environment.NewLine +
                         "- run the application in a full trust environment, or" + Environment.NewLine +
                         "- give the application write access to the 'web.config' file.");
@@ -646,7 +593,7 @@ namespace Zouave.Framework
                 success = TryWriteGlobalAsax();
                 if (!success)
                 {
-                    throw new NopException("nopCommerce needs to be restarted due to a configuration change, but was unable to do so." + Environment.NewLine +
+                    throw new ZouaveException("Zouave needs to be restarted due to a configuration change, but was unable to do so." + Environment.NewLine +
                         "To prevent this issue in the future, a change to the web server configuration is required:" + Environment.NewLine +
                         "- run the application in a full trust environment, or" + Environment.NewLine +
                         "- give the application write access to the 'Global.asax' file.");

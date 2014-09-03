@@ -57,20 +57,20 @@ namespace Zouave.Framework
         /// </summary>
         /// <param name="useSsl">Use SSL</param>
         /// <returns>Store host location</returns>
-        string GetStoreHost(bool useSsl);
+        string GetHost(bool useSsl);
 
         /// <summary>
         /// Gets store location
         /// </summary>
         /// <returns>Store location</returns>
-        string GetStoreLocation();
+        string GetLocation();
 
         /// <summary>
         /// Gets store location
         /// </summary>
         /// <param name="useSsl">Use SSL</param>
         /// <returns>Store location</returns>
-        string GetStoreLocation(bool useSsl);
+        string GetLocation(bool useSsl);
 
         /// <summary>
         /// Returns true if the requested resource is one of the typical resources that needn't be processed by the cms engine.
