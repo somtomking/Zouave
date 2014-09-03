@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Zouave.Domain.Logging;
 using Zouave.Domain.Users;
+using Zouave.Linq.Search.Paging;
 
 namespace Zouave.Services.Logging
 {
@@ -48,10 +49,10 @@ namespace Zouave.Services.Logging
         /// <param name="pageIndex">Page index</param>
         /// <param name="pageSize">Page size</param>
         /// <returns>Log item collection</returns>
-        public virtual IPagedList<Log> GetAllLogs(DateTime? fromUtc, DateTime? toUtc,
+        public virtual PagedResult<Log> GetAllLogs(DateTime? fromUtc, DateTime? toUtc,
             string message, LogLevel? logLevel, int pageIndex, int pageSize)
         {
-            return new PagedList<Log>(new List<Log>(), pageIndex, pageSize);
+            return new PagedResult<Log>(0, new List<Log>());
         }
 
         /// <summary>

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-
+using Zouave.Linq.Search.Paging;
 using Zouave.Linq.Search.Sort;
 
 namespace Zouave.Linq.Search.Extensions
@@ -15,7 +15,7 @@ namespace Zouave.Linq.Search.Extensions
             IQueryable<TEntity> queryable = source;
             queryable = queryable.FilterBy(searchCriteria.FilterCriterias);
             queryable = queryable.OrderBy(searchCriteria.SortCriterias);
-            queryable = queryable.PageBy(searchCriteria.PageSize, searchCriteria.PageIndex);
+            queryable = queryable.PageBy(searchCriteria.PagingCriteria);
             return queryable;
         }
 
@@ -55,15 +55,16 @@ namespace Zouave.Linq.Search.Extensions
             return queryable;
         }
 
-        public static IQueryable<TEntity> PageBy<TEntity>(this IQueryable<TEntity> source, int pageSize, int pageIndex)
+        public static IQueryable<TEntity> PageBy<TEntity>(this IQueryable<TEntity> source, PagingCriteria criteria)
             where TEntity : class
         {
             IQueryable<TEntity> queryable = source;
-
-            int skipCount = pageIndex * pageSize;
-            int takeCount = pageSize;
-            queryable = source.Skip(skipCount).Take(takeCount);
-
+            if (criteria != null)
+            {
+                int skipCount = criteria.PageIndex*criteria.PageSize;
+                int takeCount = criteria.PageSize;
+                queryable = source.Skip(skipCount).Take(takeCount);
+            }
             return queryable;
         }
     }

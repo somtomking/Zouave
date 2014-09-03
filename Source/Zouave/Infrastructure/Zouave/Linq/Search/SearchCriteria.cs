@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
- 
+using Zouave.Linq.Search.Paging;
 using Zouave.Linq.Search.Sort;
 
 namespace Zouave.Linq.Search
@@ -27,8 +27,7 @@ namespace Zouave.Linq.Search
             get { return _sortCriterias; }
         }
 
-        public int PageIndex { get; set; }
-        public int PageSize { get; set; }
+        public PagingCriteria PagingCriteria { get; set; }
 
         public void AddFilterCriteria(Expression<Func<TEntity, Boolean>> filter)
         {
