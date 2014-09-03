@@ -4,16 +4,20 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using Zouave.Infrastructure;
 using Zouave.Infrastructure.DependencyManagement;
+using Zouave.Web.Infrastructure.Installation;
 
 namespace Zouave.Web.Configurations
 {
     public class DependencyRegistrar : IDependencyRegistrar
     {
 
-        public void Register(ContainerBuilder builder, Infrastructure.ITypeFinder typeFinder)
+        public void Register(ContainerBuilder builder, ITypeFinder typeFinder)
         {
             builder.RegisterControllers(System.Reflection.Assembly.GetExecutingAssembly());
+            //installation localization service
+            builder.RegisterType<InstallationLocalizationService>().As<IInstallationLocalizationService>().InstancePerLifetimeScope();
         }
 
         public int Order

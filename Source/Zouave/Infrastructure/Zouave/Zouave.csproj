@@ -85,6 +85,13 @@
     <Compile Include="Data\IDataProvider.cs" />
     <Compile Include="Exceptions\NotFoundException.cs" />
     <Compile Include="Extendsions\StringExtendsion.cs" />
+    <Compile Include="Fakes\Extensions.cs" />
+    <Compile Include="Fakes\FakeHttpContext.cs" />
+    <Compile Include="Fakes\FakeHttpRequest.cs" />
+    <Compile Include="Fakes\FakeHttpResponse.cs" />
+    <Compile Include="Fakes\FakeHttpSessionState.cs" />
+    <Compile Include="Fakes\FakeIdentity.cs" />
+    <Compile Include="Fakes\FakePrincipal.cs" />
     <Compile Include="Helper\CommonHelper.cs" />
     <Compile Include="Helper\ConfigHelper.cs" />
     <Compile Include="Helper\EnvironmentHelper.cs" />
@@ -120,6 +127,7 @@
     <Compile Include="Infrastructure\Singleton.cs" />
     <Compile Include="Infrastructure\WebAppTypeFinder.cs" />
     <Compile Include="Infrastructure\ZouaveEngine.cs" />
+    <Compile Include="ISettings.cs" />
     <Compile Include="Linq\QueryableExtension.cs" />
     <Compile Include="Linq\Search\Extensions\QueryableExtension.cs" />
     <Compile Include="Linq\Search\Paging\PagedResult.cs" />
