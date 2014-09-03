@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace Zouave.Domain
 {
-    public interface IRepository
+    public interface IRepository<TEntity> where TEntity : BaseEntity
     {
-
+        TEntity Find(object id);
+        void Insert(TEntity entity);
+        void Update(TEntity entity);
+        void Delete(TEntity entity);
     }
 }

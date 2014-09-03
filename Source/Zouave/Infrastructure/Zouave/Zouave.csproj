@@ -65,6 +65,15 @@
     <Compile Include="Helper\FastReflectionLib\PropertyAccessorCache.cs" />
     <Compile Include="Helper\FastReflectionLib\PropertyAccessorFactory.cs" />
     <Compile Include="Helper\RMBHelper.cs" />
+    <Compile Include="Linq\QueryableExtension.cs" />
+    <Compile Include="Linq\Search\Extensions\QueryableExtension.cs" />
+    <Compile Include="Linq\Search\Paging\PagedResult.cs" />
+    <Compile Include="Linq\Search\Paging\PagingCriteria.cs" />
+    <Compile Include="Linq\Search\SearchCriteria.cs" />
+    <Compile Include="Linq\Search\Sort\ExpressionSortCriteria.cs" />
+    <Compile Include="Linq\Search\Sort\FieldSortCriteria.cs" />
+    <Compile Include="Linq\Search\Sort\ISortCriteria.cs" />
+    <Compile Include="Linq\Search\Sort\SortDirection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ZouaveException.cs" />
   </ItemGroup>

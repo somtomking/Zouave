@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Zouave.Domain.Users
 {
-    public interface IUserRepository : IRepository
+    public interface IUserRepository : IRepository<User>
     {
 
     }
