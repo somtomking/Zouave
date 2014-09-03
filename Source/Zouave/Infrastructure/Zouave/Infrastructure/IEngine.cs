@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Zouave.Framework.Infrastructure.DependencyManagement;
+using Zouave.Infrastructure.DependencyManagement;
 
-namespace Zouave.Framework.Infrastructure
+namespace Zouave.Infrastructure
 {
     public interface IEngine
     {

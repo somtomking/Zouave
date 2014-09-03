@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 
-namespace Zouave.Framework.Infrastructure.DependencyManagement
+namespace Zouave.Infrastructure.DependencyManagement
 {
     public class ContainerManager
     {

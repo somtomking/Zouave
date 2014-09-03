@@ -4,9 +4,9 @@ using System.Reflection;
 using System.Web;
 using System.Web.Hosting;
  
-using Zouave.Framework;
+using Zouave;
 
-namespace Zouave.Framework.Infrastructure
+namespace Zouave.Infrastructure
 {
     /// <summary>
     /// Provides information about types in the current web application. 

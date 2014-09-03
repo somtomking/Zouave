@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Zouave.Framework.Infrastructure.DependencyManagement
+namespace Zouave.Infrastructure.DependencyManagement
 {
     public interface IDependencyRegistrar
     {

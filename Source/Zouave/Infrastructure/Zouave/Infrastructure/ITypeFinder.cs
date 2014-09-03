@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace Zouave.Framework.Infrastructure
+namespace Zouave.Infrastructure
 {
     /// <summary>
     /// Classes implementing this interface provide information about types 

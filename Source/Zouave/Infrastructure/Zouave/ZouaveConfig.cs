@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Xml;
 
-namespace Zouave.Framework
+namespace Zouave
 {
     public partial class ZouaveConfig : IConfigurationSectionHandler
     {     /// <summary>

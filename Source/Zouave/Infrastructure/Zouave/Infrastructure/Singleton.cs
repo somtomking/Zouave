@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Zouave.Framework.Infrastructure
+namespace Zouave.Infrastructure
 {
     /// <summary>
     /// A statically compiled "singleton" used to store objects throughout the 

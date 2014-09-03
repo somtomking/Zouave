@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Mvc;
-using Zouave.Framework.Infrastructure.DependencyManagement;
+using Zouave.Infrastructure.DependencyManagement;
 
-namespace Zouave.Framework.Infrastructure
+namespace Zouave.Infrastructure
 {
     public class ZouaveEngine:IEngine
     {

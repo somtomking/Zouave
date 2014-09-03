@@ -1,4 +1,4 @@
-﻿namespace Zouave.Framework.Infrastructure
+﻿namespace Zouave.Infrastructure
 {
     /// <summary>
     /// Interface which should be implemented by tasks run on startup

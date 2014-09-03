@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Configuration;
 using System.Runtime.CompilerServices;
-using Zouave.Framework;
+using Zouave;
 
-namespace Zouave.Framework.Infrastructure
+namespace Zouave.Infrastructure
 {
     /// <summary>
     /// Provides access to the singleton instance of the   engine.
@@ -25,7 +25,7 @@ namespace Zouave.Framework.Infrastructure
                 if (engineType == null)
                     throw new ConfigurationErrorsException("The type '" + config.EngineType + "' could not be found. Please check the configuration at /configuration/nop/engine[@engineType] or check for missing assemblies.");
                 if (!typeof(IEngine).IsAssignableFrom(engineType))
-                    throw new ConfigurationErrorsException("The type '" + engineType + "' doesn't implement 'Nop.Core.Infrastructure.IEngine' and cannot be configured in /configuration/nop/engine[@engineType] for that purpose.");
+                    throw new ConfigurationErrorsException("The type '" + engineType + "' doesn't implement 'Zouave.Infrastructure.IEngine' and cannot be configured in /configuration/nop/engine[@engineType] for that purpose.");
                 return Activator.CreateInstance(engineType) as IEngine;
             }
 
