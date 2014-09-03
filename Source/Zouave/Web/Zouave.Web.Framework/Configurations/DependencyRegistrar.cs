@@ -1,12 +1,16 @@
 ﻿using Autofac;
+using Autofac.Features.ResolveAnything;
+using Autofac.Integration.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
+using Zouave.Data;
 using Zouave.Fakes;
 using Zouave.Framework;
+using Zouave.Framework.Plugins;
 using Zouave.Infrastructure.DependencyManagement;
 
 namespace Zouave.Web.Framework.Configurations
@@ -16,6 +20,7 @@ namespace Zouave.Web.Framework.Configurations
 
         public void Register(ContainerBuilder builder, Infrastructure.ITypeFinder typeFinder)
         {
+            builder.RegisterSource(new AnyConcreteTypeNotAlreadyRegisteredSource());
             //HTTP context and other related stuff
             builder.Register(c =>
                 //register FakeHttpContext when HttpContext is not available
@@ -39,11 +44,18 @@ namespace Zouave.Web.Framework.Configurations
 
             //web helper
             builder.RegisterType<WebHelper>().As<IWebHelper>().InstancePerLifetimeScope();
+
+            //controllers
+            builder.RegisterControllers(typeFinder.GetAssemblies().ToArray());
+
+            //plugins
+            builder.RegisterType<PluginFinder>().As<IPluginFinder>().InstancePerLifetimeScope();
+
         }
 
         public int Order
         {
-            get { return 998; }
+            get { return 0; }
         }
     }
 }

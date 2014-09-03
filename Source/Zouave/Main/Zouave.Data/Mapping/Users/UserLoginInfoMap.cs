@@ -13,7 +13,7 @@ namespace Zouave.Data.Mapping.Users
         public UserLoginInfoMap()
         {
             this.ToTable("Sys_UserLoginInfo");
-
+            
             this.HasRequired(p=>p.User).WithMany(p=>p.LoginInfos).HasForeignKey(p=>p.UserId);
         }
     }

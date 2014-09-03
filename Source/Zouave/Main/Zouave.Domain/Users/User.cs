@@ -21,9 +21,9 @@ namespace Zouave.Domain.Users
         public string PwdSalt { get; set; }
         public bool IsSysAccount { get; set; }
         public bool IsActive { get; set; }
-        public DateTime ActiveOn { get; set; }
+        public DateTime? ActiveOn { get; set; }
         public DateTime CreateOn { get; set; }
-        public DateTime LastLoginTime { get; set; }
+        public DateTime? LastLoginTime { get; set; }
         public string LastIpAddress { get; set; }
         public bool IsDeleted { get; set; }
         /// <summary>
@@ -33,5 +33,5 @@ namespace Zouave.Domain.Users
 
 
     }
- 
+
 }

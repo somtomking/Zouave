@@ -15,7 +15,7 @@ namespace Zouave.Web.Configurations
 
         public void Register(ContainerBuilder builder, ITypeFinder typeFinder)
         {
-            builder.RegisterControllers(System.Reflection.Assembly.GetExecutingAssembly());
+           
             //installation localization service
             builder.RegisterType<InstallationLocalizationService>().As<IInstallationLocalizationService>().InstancePerLifetimeScope();
         }

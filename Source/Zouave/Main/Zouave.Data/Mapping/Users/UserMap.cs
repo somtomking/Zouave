@@ -13,6 +13,7 @@ namespace Zouave.Data.Mapping.Users
         public UserMap()
         {
             this.ToTable("Sys_User");
+          
         }
     }
 }

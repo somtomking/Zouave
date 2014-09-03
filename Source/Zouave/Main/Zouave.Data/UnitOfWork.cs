@@ -11,9 +11,9 @@ namespace Zouave.Data
     {
         private readonly ZouaveObjContext _context;
 
-        public UnitOfWork()
+        public UnitOfWork(IDbContext context)
         {
-            _context = new ZouaveObjContext("Db");
+            _context = context as ZouaveObjContext;
         }
 
         public ZouaveObjContext Context

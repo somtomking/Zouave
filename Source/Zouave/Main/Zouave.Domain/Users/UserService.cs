@@ -18,6 +18,19 @@ namespace Zouave.Domain.Users.Service
         {
 
         }
+        public virtual void TestUser(string email, string pwd)
+        {
+            var user = _userRepository.Create();
+            user.Email = email;
+            user.Pwd = pwd;
+            user.CreateOn = DateTime.Now;
+            user.Guid = Guid.NewGuid();
+            user.IsSysAccount = true;
+            user.Name = email;
+            user.PwdFormatType = PwdFormat.Clear;
 
+            _userRepository.Insert(user);
+
+        }
     }
 }
