@@ -18,7 +18,7 @@ namespace Zouave.Services.Installation.Impl
             _userService = userService;
         }
         public void InstallData(string adminUserEmail, string adminUserPassword, bool installSampleData = true)
-        {
+        {　　
             _userService.TestUser(adminUserEmail, adminUserPassword);
             _unitOfWork.Commit();
         }
