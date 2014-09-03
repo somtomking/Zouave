@@ -1,9 +1,12 @@
 ﻿using Autofac;
+using Autofac.Builder;
+using Autofac.Core;
 using Autofac.Features.ResolveAnything;
 using Autofac.Integration.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
@@ -12,6 +15,11 @@ using Zouave.Fakes;
 using Zouave.Framework;
 using Zouave.Framework.Plugins;
 using Zouave.Infrastructure.DependencyManagement;
+using Zouave.Services.Helpers;
+using Zouave.Services.Helpers.Impl;
+using Zouave.Services.Settings;
+
+
 
 namespace Zouave.Web.Framework.Configurations
 {
@@ -50,6 +58,10 @@ namespace Zouave.Web.Framework.Configurations
             //controllers
             builder.RegisterControllers(typeFinder.GetAssemblies().ToArray());
 
+            //cache manager:autofac 默认取最后加入的接口实现
+            builder.RegisterType<MemoryCacheManager>().As<ICacheManager>().Named<ICacheManager>("cache_static").SingleInstance();
+            builder.RegisterType<PerRequestCacheManager>().As<ICacheManager>().Named<ICacheManager>("cache_per_request").InstancePerLifetimeScope();
+
             //plugins
             builder.RegisterType<PluginFinder>().As<IPluginFinder>().InstancePerLifetimeScope();
 
@@ -59,5 +71,38 @@ namespace Zouave.Web.Framework.Configurations
         {
             get { return 0; }
         }
+    }
+
+
+    public class SettingsSource : IRegistrationSource
+    {
+        static readonly MethodInfo BuildMethod = typeof(SettingsSource).GetMethod(
+            "BuildRegistration",
+            BindingFlags.Static | BindingFlags.NonPublic);
+
+        public IEnumerable<IComponentRegistration> RegistrationsFor(
+                Service service,
+                Func<Service, IEnumerable<IComponentRegistration>> registrations)
+        {
+            var ts = service as TypedService;
+            if (ts != null && typeof(ISettings).IsAssignableFrom(ts.ServiceType))
+            {
+                var buildMethod = BuildMethod.MakeGenericMethod(ts.ServiceType);
+                yield return (IComponentRegistration)buildMethod.Invoke(null, null);
+            }
+        }
+
+        static IComponentRegistration BuildRegistration<TSettings>() where TSettings : ISettings, new()
+        {
+            return RegistrationBuilder
+                .ForDelegate((c, p) =>
+                {
+                    return c.Resolve<ISettingFadeService>().LoadSetting<TSettings>();
+                })
+                .InstancePerLifetimeScope()
+                .CreateRegistration();
+        }
+
+        public bool IsAdapterForIndividualComponents { get { return false; } }
     }
 }
