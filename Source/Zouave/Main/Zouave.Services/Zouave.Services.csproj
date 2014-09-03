@@ -41,6 +41,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,6 +51,8 @@
   <ItemGroup>
     <Compile Include="Configurations\DependencyRegistrar.cs" />
     <Compile Include="Configurations\ObjectMapConfig.cs" />
+    <Compile Include="Helpers\Impl\UserAgentHelper.cs" />
+    <Compile Include="Helpers\IUserAgentHelper.cs" />
     <Compile Include="Installation\IInstallationFadeService.cs" />
     <Compile Include="Installation\Impl\InstallationFadeService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -57,6 +60,10 @@
     <Compile Include="Users\IUserFacadeService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Infrastructure\Zouave.Framework\Zouave.Framework.csproj">
+      <Project>{1d92d7cd-97d0-43ef-9b05-ff867fc4c762}</Project>
+      <Name>Zouave.Framework</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Infrastructure\Zouave\Zouave.csproj">
       <Project>{5198a46b-155e-4925-b2c6-7a4d5ddc3629}</Project>
       <Name>Zouave</Name>
