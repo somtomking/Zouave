@@ -80,6 +80,7 @@
     <Compile Include="Concept\IViewModel.cs" />
     <Compile Include="Data\BaseDataProviderManager.cs" />
     <Compile Include="Data\DataSettings.cs" />
+    <Compile Include="Data\DataSettingsHelper.cs" />
     <Compile Include="Data\DataSettingsManager.cs" />
     <Compile Include="Data\IDataProvider.cs" />
     <Compile Include="Exceptions\NotFoundException.cs" />
