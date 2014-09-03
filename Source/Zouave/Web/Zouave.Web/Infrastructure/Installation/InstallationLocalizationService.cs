@@ -53,12 +53,15 @@ namespace Zouave.Web.Infrastructure.Installation
         /// <returns>Current language</returns>
         public virtual InstallationLanguage GetCurrentLanguage()
         {
-           var httpContext = EngineContext.Current.Resolve<HttpContextBase>();
-            
+            var httpContext = EngineContext.Current.Resolve<HttpContextBase>();
+
             var cookieLanguageCode = "";
             var cookie = httpContext.Request.Cookies[LanguageCookieName];
             if (cookie != null && !String.IsNullOrEmpty(cookie.Value))
                 cookieLanguageCode = cookie.Value;
+
+            //目前只支持单语言
+            cookieLanguageCode = "zhs";
 
             //ensure it's available (it could be delete since the previous installation)
             var availableLanguages = GetAvailableLanguages();
@@ -134,7 +137,7 @@ namespace Zouave.Web.Infrastructure.Installation
 
                     //get language friendly name
                     var languageName = xmlDocument.SelectSingleNode(@"//Language").Attributes["Name"].InnerText.Trim();
-                    
+
                     //is default
                     var isDefaultAttribute = xmlDocument.SelectSingleNode(@"//Language").Attributes["IsDefault"];
                     var isDefault = isDefaultAttribute != null ? Convert.ToBoolean(isDefaultAttribute.InnerText.Trim()) : false;
@@ -166,7 +169,7 @@ namespace Zouave.Web.Infrastructure.Installation
                         if (resValueNode == null)
                             throw new ZouaveException("All installation resources must have an element \"Value\".");
                         var resourceValue = resValueNode.InnerText.Trim();
-                        
+
                         language.Resources.Add(new InstallationLocaleResource()
                         {
                             Name = resourceName,

@@ -316,12 +316,12 @@
                                                     &nbsp;
                                                 </td>
                                             </tr>
-                                            <tr>
+                                            @*<tr>
                                                 <td colspan="2">
                                                     @ILS.GetResource("Documentation1") <a href="http://www.nopCommerce.com/documentation.aspx"
                                                         target="_blank">@ILS.GetResource("Documentation2")</a>.
                                                 </td>
-                                            </tr>
+                                            </tr>*@
                                             <tr>
                                                 <td colspan="2">
                                                     &nbsp;
@@ -361,7 +361,7 @@
                 <a href="@Url.Action("RestartInstall", "Install")" title="@ILS.GetResource("RestartInstallationTooltip")">
                     @ILS.GetResource("RestartInstallation")</a>
             </div>
-            <div style="text-align: right; padding: 0px 0px 0px 0px; color: #606060; float: right;">
+            <div style="text-align: right; padding: 0px 0px 0px 0px; color: #606060; float: right; display:none">
                 @Html.DropDownList("language", Model.AvailableLanguages, new { onchange = "window.location.href = this.value;" })
             </div>
         </div>

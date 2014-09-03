@@ -158,7 +158,7 @@ namespace Zouave.Web.Controllers
 
             var model = new InstallModel()
             {
-                AdminEmail = "admin@yourStore.com",
+                AdminEmail = "admin@domain.com",
                 InstallSampleData = false,
                 DatabaseConnectionString = "",
                 DataProvider = "sqlserver",
