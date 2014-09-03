@@ -63,9 +63,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseEfDataProvider.cs" />
-    <Compile Include="Configurations\DependencyInjectionDataModule.cs" />
+    <Compile Include="Configurations\DependencyRegistrar.cs" />
+    <Compile Include="DbContextExtensions.cs" />
     <Compile Include="EfDataProviderManager.cs" />
     <Compile Include="GenericRepository.cs" />
+    <Compile Include="IDbContext.cs" />
     <Compile Include="IEfDataProvider.cs" />
     <Compile Include="Initializers\CreateCeDatabaseIfNotExists.cs" />
     <Compile Include="Initializers\CreateTablesIfNotExist.cs" />

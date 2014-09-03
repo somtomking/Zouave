@@ -48,7 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configurations\DependencyInjectionServiceModule.cs" />
+    <Compile Include="Configurations\DependencyRegistrar.cs" />
     <Compile Include="Configurations\ObjectMapConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Users\Impl\UserFacadeService.cs" />
