@@ -36,9 +36,8 @@ namespace Zouave.Data.Configurations
             {
                 builder.Register<IDbContext>(c => new ZouaveObjContext(dataSettingsManager.LoadSettings().DataConnectionString)).InstancePerLifetimeScope();
             }
-
-
             builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().InstancePerLifetimeScope();
+
             builder.RegisterType<UserRepository>().As<IUserRepository>();
         }
 

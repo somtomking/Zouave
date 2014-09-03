@@ -16,7 +16,9 @@ namespace Zouave.Services.Configurations
 
         public void Register(ContainerBuilder builder, Infrastructure.ITypeFinder typeFinder)
         {
+            
             builder.RegisterType<InstallationFadeService>().As<IInstallationFadeService>().InstancePerLifetimeScope();
+            
         }
 
         public int Order

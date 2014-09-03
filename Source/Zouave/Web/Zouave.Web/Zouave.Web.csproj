@@ -2345,6 +2345,7 @@
     <Content Include="Areas\Admin\Content\kendo\2014.1.318\kendo.view.min.js.map" />
     <Content Include="Areas\Admin\Content\kendo\2014.1.318\kendo.web.min.js.map" />
     <Content Include="Areas\Admin\Content\kendo\2014.1.318\kendo.window.min.js.map" />
+    <Content Include="App_Data\uas_20140512-01.ini" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

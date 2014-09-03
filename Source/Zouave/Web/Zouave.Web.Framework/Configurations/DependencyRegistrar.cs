@@ -44,6 +44,8 @@ namespace Zouave.Web.Framework.Configurations
 
             //web helper
             builder.RegisterType<WebHelper>().As<IWebHelper>().InstancePerLifetimeScope();
+            //user agent helper
+            builder.RegisterType<UserAgentHelper>().As<IUserAgentHelper>().InstancePerLifetimeScope();
 
             //controllers
             builder.RegisterControllers(typeFinder.GetAssemblies().ToArray());

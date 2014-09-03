@@ -16,8 +16,7 @@ namespace Zouave.Web.Configurations
         public void Register(ContainerBuilder builder, ITypeFinder typeFinder)
         {
            
-            //installation localization service
-            builder.RegisterType<InstallationLocalizationService>().As<IInstallationLocalizationService>().InstancePerLifetimeScope();
+           
         }
 
         public int Order
