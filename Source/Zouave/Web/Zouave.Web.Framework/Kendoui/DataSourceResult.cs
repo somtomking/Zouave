@@ -13,3 +13,4 @@ namespace Zouave.Web.Framework.Kendoui
         public int Total { get; set; }
     }
 }
+ 
