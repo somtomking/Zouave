@@ -14,7 +14,7 @@ namespace Zouave.Domain.Users.Service
             _userRepository = userRepository;
         }
 
-        public virtual void ChangePassword(long userId, string oldPwd, string newPwd)
+        public virtual void ChangePassword(User user, string oldPwd, string newPwd)
         {
 
         }
