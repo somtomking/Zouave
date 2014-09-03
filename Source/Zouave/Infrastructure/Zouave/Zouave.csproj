@@ -133,11 +133,10 @@
     <Compile Include="Infrastructure\Singleton.cs" />
     <Compile Include="Infrastructure\WebAppTypeFinder.cs" />
     <Compile Include="Infrastructure\ZouaveEngine.cs" />
+    <Compile Include="IPagedList.cs" />
     <Compile Include="ISettings.cs" />
     <Compile Include="Linq\QueryableExtension.cs" />
     <Compile Include="Linq\Search\Extensions\QueryableExtension.cs" />
-    <Compile Include="Linq\Search\Paging\PagedResult.cs" />
-    <Compile Include="Linq\Search\Paging\PagingCriteria.cs" />
     <Compile Include="Linq\Search\SearchCriteria.cs" />
     <Compile Include="Linq\Search\Sort\ExpressionSortCriteria.cs" />
     <Compile Include="Linq\Search\Sort\FieldSortCriteria.cs" />
