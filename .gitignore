@@ -12,3 +12,6 @@
 /Source/Zouave/Main/Zouave.Entity/obj/Debug
 /Source/Zouave/Main/Zouave.Services/bin/Debug
 /Source/Zouave/Main/Zouave.Services/obj/Debug
+bin
+*.suo
+obj
