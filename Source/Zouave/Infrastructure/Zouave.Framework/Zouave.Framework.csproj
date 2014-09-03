@@ -90,6 +90,7 @@
     <Compile Include="Plugins\PluginFinder.cs" />
     <Compile Include="Plugins\PluginManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Main\Zouave.Data\Zouave.Data.csproj">

@@ -25,7 +25,7 @@ namespace Zouave.Framework.Plugins
                 return null;
             }
 
-            string logoUrl = string.Format("{0}plugins/{1}/logo.jpg", webHelper.GetStoreLocation(), pluginDirectory.Name);
+            string logoUrl = string.Format("plugins/{0}/logo.jpg", pluginDirectory.Name);
             return logoUrl;
         }
     }
