@@ -9,7 +9,7 @@ namespace Zouave.Domain
     public interface IRepository<TEntity> where TEntity : BaseEntity
     {
 
-        TEntity Find(object id);
+        TEntity GetById(object id);
         TEntity Create();
         void Insert(TEntity entity);
         void Update(TEntity entity);

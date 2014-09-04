@@ -28,7 +28,7 @@ namespace Zouave.Data
             get { return _dbSet; }
         }
 
-        public virtual TEntity Find(object id)
+        public virtual TEntity GetById(object id)
         {
             return _dbSet.Find(id);
         }
