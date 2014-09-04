@@ -59,7 +59,7 @@ namespace Zouave.Services.Settings.Impl
         [Serializable]
         public class SettingForCaching
         {
-            public int Id { get; set; }
+            public long Id { get; set; }
             public string Name { get; set; }
             public string Value { get; set; }
             public int Scope { get; set; }
@@ -81,8 +81,8 @@ namespace Zouave.Services.Settings.Impl
             {
                 //we use no tracking here for performance optimization
                 //anyway records are loaded only for read-only operations
-                var query = from s in _settingRepository.TableNoTracking
-                            orderby s.Name, s.scope
+                var query = from s in _settingRepository.GetAll()
+                            orderby s.Name, s.Scope
                             select s;
                 var settings = query.ToList();
                 var dictionary = new Dictionary<string, IList<SettingForCaching>>();
@@ -94,7 +94,7 @@ namespace Zouave.Services.Settings.Impl
                                 Id = s.Id,
                                 Name = s.Name,
                                 Value = s.Value,
-                                Scope = s.scope
+                                Scope = s.Scope
                             };
                     if (!dictionary.ContainsKey(resourceName))
                     {
@@ -182,7 +182,7 @@ namespace Zouave.Services.Settings.Impl
         /// </summary>
         /// <param name="settingId">Setting identifier</param>
         /// <returns>Setting</returns>
-        public virtual Setting GetSettingById(int settingId)
+        public virtual Setting GetSettingById(long settingId)
         {
             if (settingId == 0)
                 return null;
@@ -267,11 +267,7 @@ namespace Zouave.Services.Settings.Impl
         /// <returns>Setting collection</returns>
         public virtual IList<Setting> GetAllSettings()
         {
-            var query = from s in _settingRepository.Table
-                        orderby s.Name, s.scope
-                        select s;
-            var settings = query.ToList();
-            return settings;
+            return _settingRepository.GetAll();
         }
 
         /// <summary>
@@ -484,5 +480,7 @@ namespace Zouave.Services.Settings.Impl
         }
 
         #endregion
+
+        
     }
 }

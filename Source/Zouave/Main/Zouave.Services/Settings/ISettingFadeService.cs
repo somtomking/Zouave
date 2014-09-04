@@ -14,7 +14,7 @@ namespace Zouave.Services.Settings
         /// </summary>
         /// <param name="settingId">Setting identifier</param>
         /// <returns>Setting</returns>
-        Setting GetSettingById(int settingId);
+        Setting GetSettingById(long settingId);
 
         /// <summary>
         /// Deletes a setting

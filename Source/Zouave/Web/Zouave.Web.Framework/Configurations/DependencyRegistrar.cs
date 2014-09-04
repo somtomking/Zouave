@@ -10,6 +10,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
+using Zouave.Caching;
 using Zouave.Data;
 using Zouave.Fakes;
 using Zouave.Framework;

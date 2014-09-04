@@ -8,5 +8,7 @@ namespace Zouave.Domain.Configuration
 {
     public partial interface ISettingRepository : IRepository<Setting>
     {
+
+        IList<Setting> GetAll();
     }
 }

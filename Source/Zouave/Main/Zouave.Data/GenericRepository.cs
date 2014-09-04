@@ -33,7 +33,7 @@ namespace Zouave.Data
             return _dbSet.Find(id);
         }
 
-        public virtual IEnumerable<TEntity> FindAll()
+        public virtual IList<TEntity> GetAll()
         {
             return _dbSet.ToList();
         }
