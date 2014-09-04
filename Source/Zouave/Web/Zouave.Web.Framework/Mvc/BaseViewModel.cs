@@ -17,7 +17,7 @@ namespace Zouave.Web.Framework.Mvc
         }
 
         /// <summary>
-        /// Use this property to store any custom value for your models. 
+        /// Use this property   any custom value for your models. 
         /// </summary>
         public Dictionary<string, object> CustomProperties { get; set; }
     }
