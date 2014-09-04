@@ -92,7 +92,7 @@
     <Compile Include="Kendoui\ModelStateExtensions.cs" />
     <Compile Include="Kendoui\QueryableExtensions.cs" />
     <Compile Include="Kendoui\Sort.cs" />
-    <Compile Include="Mvc\BaseNopModel.cs" />
+    <Compile Include="Mvc\BaseViewModel.cs" />
     <Compile Include="Mvc\CommaSeparatedModelBinder.cs" />
     <Compile Include="Mvc\DeleteConfirmationModel.cs" />
     <Compile Include="Mvc\DependencyRegistrarExtensions.cs" />

@@ -24,7 +24,7 @@ namespace Zouave.Web
             EngineContext.Initialize(false);
 
             //model binders
-            ModelBinders.Binders.Add(typeof(BaseNopModel), new ZouaveModelBinder());
+            ModelBinders.Binders.Add(typeof(BaseViewModel), new ZouaveModelBinder());
 
             //Add some functionality on top of the default ModelMetadataProvider
             ModelMetadataProviders.Current = new ZouaveMetadataProvider();

@@ -4,11 +4,11 @@ using System.Web.Mvc;
 namespace Zouave.Web.Framework.Mvc
 {
     /// <summary>
-    /// Base nopCommerce model
+    /// Base view model
     /// </summary>
-    public partial class BaseNopModel
+    public partial class BaseViewModel
     {
-        public BaseNopModel()
+        public BaseViewModel()
         {
             this.CustomProperties = new Dictionary<string, object>();
         }
@@ -23,10 +23,10 @@ namespace Zouave.Web.Framework.Mvc
     }
 
     /// <summary>
-    /// Base nopCommerce entity model
+    /// Base view entity model
     /// </summary>
-    public partial class BaseNopEntityModel : BaseNopModel
+    public partial class BaseViewEntityModel : BaseViewModel
     {
-        public virtual int Id { get; set; }
+        public virtual long Id { get; set; }
     }
 }

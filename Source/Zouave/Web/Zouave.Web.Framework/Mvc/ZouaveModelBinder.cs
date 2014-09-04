@@ -7,9 +7,9 @@ namespace Zouave.Web.Framework.Mvc
         public override object BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
         {
             var model = base.BindModel(controllerContext, bindingContext);
-            if (model is BaseNopModel)
+            if (model is BaseViewModel)
             {
-                ((BaseNopModel)model).BindModel(controllerContext, bindingContext);
+                ((BaseViewModel)model).BindModel(controllerContext, bindingContext);
             }
             return model;
         }

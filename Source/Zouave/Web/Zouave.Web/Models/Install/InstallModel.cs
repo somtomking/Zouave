@@ -10,7 +10,7 @@ using Zouave.Web.Validators.Install;
 namespace Zouave.Web.Models.Install
 {
     [FluentValidation.Attributes.Validator(typeof(InstallValidator))]
-    public partial class InstallModel : BaseNopModel
+    public partial class InstallModel : BaseViewModel
     {
         public InstallModel()
         {
