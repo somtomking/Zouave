@@ -2400,6 +2400,10 @@
       <Project>{5198a46b-155e-4925-b2c6-7a4d5ddc3629}</Project>
       <Name>Zouave</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Main\Zouave.ApplicationServices\Zouave.ApplicationServices.csproj">
+      <Project>{9b5c7960-297a-490e-8c53-942f2cd4f1e7}</Project>
+      <Name>Zouave.ApplicationServices</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Main\Zouave.Data\Zouave.Data.csproj">
       <Project>{9138845c-20a5-488f-a733-8e76c90efac3}</Project>
       <Name>Zouave.Data</Name>
@@ -2411,10 +2415,6 @@
     <ProjectReference Include="..\..\Main\Zouave.Dto\Zouave.Dto.csproj">
       <Project>{46eae82d-af06-4d9d-a7f7-723e5b4459b3}</Project>
       <Name>Zouave.Dto</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Main\Zouave.Services\Zouave.Services.csproj">
-      <Project>{9b5c7960-297a-490e-8c53-942f2cd4f1e7}</Project>
-      <Name>Zouave.Services</Name>
     </ProjectReference>
     <ProjectReference Include="..\Zouave.Web.Framework\Zouave.Web.Framework.csproj">
       <Project>{2badf35a-7210-4df3-86c7-6ca773abf408}</Project>

@@ -15,8 +15,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Main(业务核心)", "Main(
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zouave", "Infrastructure\Zouave\Zouave.csproj", "{5198A46B-155E-4925-B2C6-7A4D5DDC3629}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zouave.Services", "Main\Zouave.Services\Zouave.Services.csproj", "{9B5C7960-297A-490E-8C53-942F2CD4F1E7}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zouave.Data", "Main\Zouave.Data\Zouave.Data.csproj", "{9138845C-20A5-488F-A733-8E76C90EFAC3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zouave.Domain", "Main\Zouave.Domain\Zouave.Domain.csproj", "{04D9DB63-9B5D-4769-86AB-F619FED93F39}"
@@ -31,7 +29,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01第三方程序集", "01�
 		libs\UserAgentStringLibrary.dll = libs\UserAgentStringLibrary.dll
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Applications", "Applications", "{937B79A5-9DDB-4D70-BCFD-04F909AC3093}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zouave.ApplicationServices", "Main\Zouave.ApplicationServices\Zouave.ApplicationServices.csproj", "{9B5C7960-297A-490E-8C53-942F2CD4F1E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,10 +49,6 @@ Global
 		{5198A46B-155E-4925-B2C6-7A4D5DDC3629}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5198A46B-155E-4925-B2C6-7A4D5DDC3629}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5198A46B-155E-4925-B2C6-7A4D5DDC3629}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9B5C7960-297A-490E-8C53-942F2CD4F1E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9B5C7960-297A-490E-8C53-942F2CD4F1E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9B5C7960-297A-490E-8C53-942F2CD4F1E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9B5C7960-297A-490E-8C53-942F2CD4F1E7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9138845C-20A5-488F-A733-8E76C90EFAC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9138845C-20A5-488F-A733-8E76C90EFAC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9138845C-20A5-488F-A733-8E76C90EFAC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -71,6 +65,10 @@ Global
 		{1D92D7CD-97D0-43EF-9B05-FF867FC4C762}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D92D7CD-97D0-43EF-9B05-FF867FC4C762}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D92D7CD-97D0-43EF-9B05-FF867FC4C762}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B5C7960-297A-490E-8C53-942F2CD4F1E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B5C7960-297A-490E-8C53-942F2CD4F1E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B5C7960-297A-490E-8C53-942F2CD4F1E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B5C7960-297A-490E-8C53-942F2CD4F1E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -83,7 +81,6 @@ Global
 		{04D9DB63-9B5D-4769-86AB-F619FED93F39} = {37CC1252-6A46-4CAC-B7A5-9169A88C96D9}
 		{46EAE82D-AF06-4D9D-A7F7-723E5B4459B3} = {37CC1252-6A46-4CAC-B7A5-9169A88C96D9}
 		{1D92D7CD-97D0-43EF-9B05-FF867FC4C762} = {37CC1252-6A46-4CAC-B7A5-9169A88C96D9}
-		{937B79A5-9DDB-4D70-BCFD-04F909AC3093} = {37CC1252-6A46-4CAC-B7A5-9169A88C96D9}
-		{9B5C7960-297A-490E-8C53-942F2CD4F1E7} = {937B79A5-9DDB-4D70-BCFD-04F909AC3093}
+		{9B5C7960-297A-490E-8C53-942F2CD4F1E7} = {37CC1252-6A46-4CAC-B7A5-9169A88C96D9}
 	EndGlobalSection
 EndGlobal

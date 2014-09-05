@@ -10,16 +10,16 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
+using Zouave.ApplicationServices.Helpers;
+using Zouave.ApplicationServices.Helpers.Impl;
+using Zouave.ApplicationServices.Settings;
 using Zouave.Caching;
 using Zouave.Data;
 using Zouave.Fakes;
 using Zouave.Framework;
 using Zouave.Framework.Plugins;
 using Zouave.Infrastructure.DependencyManagement;
-using Zouave.Services.Helpers;
-using Zouave.Services.Helpers.Impl;
-using Zouave.Services.Settings;
-
+ 
 
 
 namespace Zouave.Web.Framework.Configurations
