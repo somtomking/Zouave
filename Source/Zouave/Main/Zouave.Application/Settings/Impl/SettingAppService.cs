@@ -105,12 +105,12 @@ namespace Zouave.Application.Settings.Impl
         /// </summary>
         /// <param name="setting">Setting</param>
         /// <param name="clearCache">A value indicating whether to clear cache after setting update</param>
-        public virtual void InsertSetting(Setting setting, bool clearCache = true)
+        public virtual void InsertSetting(SettingDto setting, bool clearCache = true)
         {
             if (setting == null)
                 throw new ArgumentNullException("setting");
 
-            _settingRepository.Insert(setting);
+            _settingRepository.Insert(setting.ToEntity());
 
             //cache
             if (clearCache)
@@ -125,12 +125,12 @@ namespace Zouave.Application.Settings.Impl
         /// </summary>
         /// <param name="setting">Setting</param>
         /// <param name="clearCache">A value indicating whether to clear cache after setting update</param>
-        public virtual void UpdateSetting(Setting setting, bool clearCache = true)
+        public virtual void UpdateSetting(SettingDto setting, bool clearCache = true)
         {
             if (setting == null)
                 throw new ArgumentNullException("setting");
 
-            _settingRepository.Update(setting);
+            _settingRepository.Update(setting.ToEntity());
 
             //cache
             if (clearCache)
@@ -144,12 +144,12 @@ namespace Zouave.Application.Settings.Impl
         /// Deletes a setting
         /// </summary>
         /// <param name="setting">Setting</param>
-        public virtual void DeleteSetting(Setting setting)
+        public virtual void DeleteSetting(SettingDto setting)
         {
             if (setting == null)
                 throw new ArgumentNullException("setting");
 
-            _settingRepository.Delete(setting);
+            _settingRepository.Delete(setting.ToEntity());
 
             //cache
             _cacheManager.RemoveByPattern(SETTINGS_PATTERN_KEY);
@@ -163,12 +163,12 @@ namespace Zouave.Application.Settings.Impl
         /// </summary>
         /// <param name="settingId">Setting identifier</param>
         /// <returns>Setting</returns>
-        public virtual Setting GetSettingById(long settingId)
+        public virtual SettingDto GetSettingById(long settingId)
         {
             if (settingId == 0)
                 return null;
-
-            return _settingRepository.GetById(settingId);
+            var entity = _settingRepository.GetById(settingId);
+            return entity.ToDto();
         }
 
         /// <summary>
@@ -238,7 +238,7 @@ namespace Zouave.Application.Settings.Impl
                     Value = valueStr,
                     Scope = scope
                 };
-                InsertSetting(setting, clearCache);
+                InsertSetting(setting.ToDto(), clearCache);
             }
         }
 
@@ -246,9 +246,9 @@ namespace Zouave.Application.Settings.Impl
         /// Gets all settings
         /// </summary>
         /// <returns>Setting collection</returns>
-        public virtual IList<Setting> GetAllSettings()
+        public virtual IList<SettingDto> GetAllSettings()
         {
-            return _settingRepository.GetAll();
+            return _settingRepository.GetAll().Convert<IList<Setting>, IList<SettingDto>>();
         }
 
         /// <summary>
@@ -399,7 +399,7 @@ namespace Zouave.Application.Settings.Impl
         /// <typeparam name="T">Type</typeparam>
         public virtual void DeleteSetting<T>() where T : ISettings, new()
         {
-            var settingsToDelete = new List<Setting>();
+            var settingsToDelete = new List<SettingDto>();
             var allSettings = GetAllSettings();
             foreach (var prop in typeof(T).GetProperties())
             {

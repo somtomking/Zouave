@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Zouave.Domain.Security
 {
-    public class SecuritySettings : ISettings
+    public class SecuritySettings 
     {
         /// <summary>
         /// Gets or sets a value indicating whether all pages will be forced to use SSL (no matter of a specified [NopHttpsRequirementAttribute] attribute)

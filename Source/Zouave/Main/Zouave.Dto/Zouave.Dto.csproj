@@ -42,6 +42,7 @@
     <Compile Include="Configuration\SettingDto.cs" />
     <Compile Include="Dto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\SecuritySettingsDto.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Users\" />

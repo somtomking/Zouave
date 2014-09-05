@@ -16,6 +16,17 @@ namespace Zouave.Application
     /// </summary>
     public static class MappingExtensions
     {
+        #region 工具
+    
+        public static To Convert<From, To>(this From f) where From : class
+        {
+            return Mapper.Map<From, To>(f);
+        }
+        public static To Convert<From, To>(this From f, To t) where From : class
+        {
+            return Mapper.Map<From, To>(f, t);
+        }
+        #endregion
         #region Setting
         public static Setting ToEntity(this SettingDto dto)
         {

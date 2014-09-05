@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using Zouave.Domain.Configuration;
+using Zouave.Dto.Configuration;
 
 namespace Zouave.Application.Settings
 {
@@ -11,13 +12,13 @@ namespace Zouave.Application.Settings
         /// </summary>
         /// <param name="settingId">Setting identifier</param>
         /// <returns>Setting</returns>
-        Setting GetSettingById(long settingId);
+        SettingDto GetSettingById(long settingId);
 
         /// <summary>
         /// Deletes a setting
         /// </summary>
         /// <param name="setting">Setting</param>
-        void DeleteSetting(Setting setting);
+        void DeleteSetting(SettingDto setting);
 
         /// <summary>
         /// Get setting value by key
@@ -45,7 +46,7 @@ namespace Zouave.Application.Settings
         /// Gets all settings
         /// </summary>
         /// <returns>Settings</returns>
-        IList<Setting> GetAllSettings();
+        IList<SettingDto> GetAllSettings();
 
         /// <summary>
         /// Determines whether a setting exists

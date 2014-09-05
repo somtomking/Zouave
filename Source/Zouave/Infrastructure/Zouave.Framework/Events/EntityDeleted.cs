@@ -6,7 +6,7 @@ namespace Zouave.Framework.Events
     /// A container for passing entities that have been deleted. This is not used for entities that are deleted logicaly via a bit column.
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class EntityDeleted<T> where T : BaseEntity
+    public class EntityDeleted<T> where T : class
     {
         public EntityDeleted(T entity)
         {

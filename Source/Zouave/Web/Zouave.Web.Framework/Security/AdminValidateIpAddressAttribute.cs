@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Web;
 using System.Web.Mvc;
-using Zouave.Domain.Security;
+using Zouave.Dto.Security;
 using Zouave.Framework;
 using Zouave.Infrastructure;
  
@@ -23,7 +23,7 @@ namespace Zouave.Web.Framework.Security
             if (filterContext.IsChildAction)
                 return;
             bool ok = false;
-            var ipAddresses = EngineContext.Current.Resolve<SecuritySettings>().AdminAreaAllowedIpAddresses;
+            var ipAddresses = EngineContext.Current.Resolve<SecuritySettingsDto>().AdminAreaAllowedIpAddresses;
             if (ipAddresses != null && ipAddresses.Count > 0)
             {
                 var webHelper = EngineContext.Current.Resolve<IWebHelper>();
