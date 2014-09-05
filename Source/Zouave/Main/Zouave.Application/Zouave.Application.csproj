@@ -52,6 +52,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppServiceBase.cs" />
     <Compile Include="Configurations\DependencyRegistrar.cs" />
     <Compile Include="Configurations\ObjectMapConfigStartupTask.cs" />
     <Compile Include="Events\EventPublisher.cs" />

@@ -43,10 +43,11 @@
     <Compile Include="Dto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Security\SecuritySettingsDto.cs" />
+    <Compile Include="Users\UserInfoDto.cs" />
+    <Compile Include="Users\UserRegisterDto.cs" />
+    <Compile Include="Users\UserLoginInfoDto.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Users\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\..\Infrastructure\Zouave\Zouave.csproj">
       <Project>{5198a46b-155e-4925-b2c6-7a4d5ddc3629}</Project>
