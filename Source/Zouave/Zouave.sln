@@ -29,7 +29,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01第三方程序集", "01�
 		libs\UserAgentStringLibrary.dll = libs\UserAgentStringLibrary.dll
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zouave.ApplicationServices", "Main\Zouave.ApplicationServices\Zouave.ApplicationServices.csproj", "{9B5C7960-297A-490E-8C53-942F2CD4F1E7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zouave.Application", "Main\Zouave.Application\Zouave.Application.csproj", "{9B5C7960-297A-490E-8C53-942F2CD4F1E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

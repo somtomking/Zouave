@@ -8,7 +8,7 @@ using System.Threading;
 using System.Web;
 using System.Web.Hosting;
 using System.Web.Mvc;
-using Zouave.ApplicationServices.Installation;
+using Zouave.Application.Installation;
 using Zouave.Data;
 using Zouave.Framework;
 using Zouave.Framework.Plugins;
