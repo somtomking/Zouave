@@ -5,11 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
 using Zouave.Concept;
- 
+
 using Zouave.Dto.Configuration;
 using Zouave.Domain.Configuration;
 namespace Zouave.Application
 {
+    /// <summary>
+    /// Dto和Domain类型的相互转换
+    /// 备注：添加一个Dto要加入相应的映射
+    /// </summary>
     public static class MappingExtensions
     {
         #region Setting
@@ -31,6 +35,6 @@ namespace Zouave.Application
             return Mapper.Map<Setting, SettingDto>(entity, dto);
         }
         #endregion
-     
+
     }
 }
