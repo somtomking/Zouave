@@ -7,7 +7,7 @@ using Zouave.ApplicationServices.Users;
 
 namespace Zouave.Services.Users.Impl
 {
-   public partial class UserFacadeService : IUserFacadeService
+   public partial class UserFacadeService : IUserAppService
     {
     }
 }

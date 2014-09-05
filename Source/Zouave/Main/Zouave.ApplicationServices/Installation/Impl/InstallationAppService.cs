@@ -3,11 +3,11 @@ using Zouave.Domain.Users.Service;
 
 namespace Zouave.ApplicationServices.Installation.Impl
 {
-    public partial class InstallationFadeService : IInstallationFadeService
+    public partial class InstallationAppService : IInstallationAppService
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly UserService _userService;
-        public InstallationFadeService(IUnitOfWork unitOfWork, UserService userService)
+        public InstallationAppService(IUnitOfWork unitOfWork, UserService userService)
         {
             _unitOfWork = unitOfWork;
             _userService = userService;

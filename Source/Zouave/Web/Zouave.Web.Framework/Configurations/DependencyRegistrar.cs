@@ -98,7 +98,7 @@ namespace Zouave.Web.Framework.Configurations
             return RegistrationBuilder
                 .ForDelegate((c, p) =>
                 {
-                    return c.Resolve<ISettingFadeService>().LoadSetting<TSettings>();
+                    return c.Resolve<ISettingAppService>().LoadSetting<TSettings>();
                 })
                 .InstancePerLifetimeScope()
                 .CreateRegistration();

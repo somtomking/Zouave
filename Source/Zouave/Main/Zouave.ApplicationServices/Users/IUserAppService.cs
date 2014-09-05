@@ -1,6 +1,6 @@
 ﻿namespace Zouave.ApplicationServices.Users
 {
-    public partial interface IUserFacadeService
+    public partial interface IUserAppService
     {
     }
 }

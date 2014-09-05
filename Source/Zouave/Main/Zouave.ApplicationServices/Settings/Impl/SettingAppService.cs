@@ -10,7 +10,7 @@ using Zouave.Framework;
 
 namespace Zouave.ApplicationServices.Settings.Impl
 {
-    public class SettingFadeService : ISettingFadeService
+    public class SettingAppService : ISettingAppService
     {
            #region Constants
 
@@ -41,7 +41,7 @@ namespace Zouave.ApplicationServices.Settings.Impl
         /// <param name="cacheManager">Cache manager</param>
         /// <param name="eventPublisher">Event publisher</param>
         /// <param name="settingRepository">Setting repository</param>
-        public SettingFadeService(ICacheManager cacheManager, IEventPublisher eventPublisher,
+        public SettingAppService(ICacheManager cacheManager, IEventPublisher eventPublisher,
             ISettingRepository settingRepository)
         {
             this._cacheManager = cacheManager;

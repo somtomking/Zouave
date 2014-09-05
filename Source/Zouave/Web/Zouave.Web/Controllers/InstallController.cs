@@ -356,7 +356,7 @@ namespace Zouave.Web.Controllers
 
 
                     //now resolve installation service
-                    var installationService = EngineContext.Current.Resolve<IInstallationFadeService>();
+                    var installationService = EngineContext.Current.Resolve<IInstallationAppService>();
                     installationService.InstallData(model.AdminEmail, model.AdminPassword, model.InstallSampleData);
 
                     //reset cache

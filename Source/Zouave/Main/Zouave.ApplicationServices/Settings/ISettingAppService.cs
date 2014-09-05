@@ -5,7 +5,7 @@ using Zouave.Domain.Configuration;
 
 namespace Zouave.ApplicationServices.Settings
 {
-    public partial interface ISettingFadeService
+    public partial interface ISettingAppService
     { /// <summary>
         /// Gets a setting by identifier
         /// </summary>

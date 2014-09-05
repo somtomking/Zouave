@@ -13,7 +13,7 @@ namespace Zouave.ApplicationServices.Configurations
         public void Register(ContainerBuilder builder, Infrastructure.ITypeFinder typeFinder)
         {
             
-            builder.RegisterType<InstallationFadeService>().As<IInstallationFadeService>().InstancePerLifetimeScope();
+            builder.RegisterType<InstallationAppService>().As<IInstallationAppService>().InstancePerLifetimeScope();
             
         }
 
