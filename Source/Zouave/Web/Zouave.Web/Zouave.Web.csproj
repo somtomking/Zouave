@@ -2404,14 +2404,6 @@
       <Project>{9b5c7960-297a-490e-8c53-942f2cd4f1e7}</Project>
       <Name>Zouave.Application</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Main\Zouave.Data\Zouave.Data.csproj">
-      <Project>{9138845c-20a5-488f-a733-8e76c90efac3}</Project>
-      <Name>Zouave.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Main\Zouave.Domain\Zouave.Domain.csproj">
-      <Project>{04d9db63-9b5d-4769-86ab-f619fed93f39}</Project>
-      <Name>Zouave.Domain</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\Main\Zouave.Dto\Zouave.Dto.csproj">
       <Project>{46eae82d-af06-4d9d-a7f7-723e5b4459b3}</Project>
       <Name>Zouave.Dto</Name>

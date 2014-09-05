@@ -6,13 +6,14 @@ using System.Reflection;
 using Zouave.Application.Events;
 using Zouave.Caching;
 using Zouave.Domain.Configuration;
+using Zouave.Dto.Configuration;
 using Zouave.Framework;
 
 namespace Zouave.Application.Settings.Impl
 {
     public class SettingAppService : ISettingAppService
     {
-           #region Constants
+        #region Constants
 
         /// <summary>
         /// Key for caching
@@ -51,18 +52,7 @@ namespace Zouave.Application.Settings.Impl
 
         #endregion
 
-        #region Nested classes
 
-        [Serializable]
-        public class SettingForCaching
-        {
-            public long Id { get; set; }
-            public string Name { get; set; }
-            public string Value { get; set; }
-            public int Scope { get; set; }
-        }
-
-        #endregion
 
         #region Utilities
 
@@ -70,7 +60,7 @@ namespace Zouave.Application.Settings.Impl
         /// Gets all settings
         /// </summary>
         /// <returns>Setting collection</returns>
-        protected virtual IDictionary<string, IList<SettingForCaching>> GetAllSettingsCached()
+        protected virtual IDictionary<string, IList<SettingDto>> GetAllSettingsCached()
         {
             //cache
             string key = string.Format(SETTINGS_ALL_KEY);
@@ -82,30 +72,24 @@ namespace Zouave.Application.Settings.Impl
                             orderby s.Name, s.Scope
                             select s;
                 var settings = query.ToList();
-                var dictionary = new Dictionary<string, IList<SettingForCaching>>();
+                var dictionary = new Dictionary<string, IList<SettingDto>>();
                 foreach (var s in settings)
                 {
                     var resourceName = s.Name.ToLowerInvariant();
-                    var settingForCaching = new SettingForCaching()
-                            {
-                                Id = s.Id,
-                                Name = s.Name,
-                                Value = s.Value,
-                                Scope = s.Scope
-                            };
+                    var settingDto = s.ToDto();
                     if (!dictionary.ContainsKey(resourceName))
                     {
                         //first setting
-                        dictionary.Add(resourceName, new List<SettingForCaching>()
+                        dictionary.Add(resourceName, new List<SettingDto>()
                         {
-                            settingForCaching
+                            settingDto
                         });
                     }
                     else
                     {
                         //already added
                         //most probably it's the setting with the same name but for some certain store (scope > 0)
-                        dictionary[resourceName].Add(settingForCaching);
+                        dictionary[resourceName].Add(settingDto);
                     }
                 }
                 return dictionary;
@@ -186,7 +170,7 @@ namespace Zouave.Application.Settings.Impl
 
             return _settingRepository.GetById(settingId);
         }
-        
+
         /// <summary>
         /// Get setting value by key
         /// </summary>
@@ -196,7 +180,7 @@ namespace Zouave.Application.Settings.Impl
         /// <param name="scope">Store identifier</param>
         /// <param name="loadSharedValueIfNotFound">A value indicating whether a shared (for all stores) value should be loaded if a value specific for a certain is not found</param>
         /// <returns>Setting value</returns>
-        public virtual T GetSettingByKey<T>(string key, T defaultValue = default(T), 
+        public virtual T GetSettingByKey<T>(string key, T defaultValue = default(T),
             int scope = 0, bool loadSharedValueIfNotFound = false)
         {
             if (String.IsNullOrEmpty(key))
@@ -236,7 +220,7 @@ namespace Zouave.Application.Settings.Impl
             string valueStr = CommonHelper.GetNopCustomTypeConverter(typeof(T)).ConvertToInvariantString(value);
 
             var allSettings = GetAllSettingsCached();
-            var settingForCaching = allSettings.ContainsKey(key) ? 
+            var settingForCaching = allSettings.ContainsKey(key) ?
                 allSettings[key].FirstOrDefault(x => x.Scope == scope) : null;
             if (settingForCaching != null)
             {
@@ -276,8 +260,8 @@ namespace Zouave.Application.Settings.Impl
         /// <param name="keySelector">Key selector</param>
         /// <param name="scope">Store identifier</param>
         /// <returns>true -setting exists; false - does not exist</returns>
-        public virtual bool SettingExists<T, TPropType>(T settings, 
-            Expression<Func<T, TPropType>> keySelector, int scope = 0) 
+        public virtual bool SettingExists<T, TPropType>(T settings,
+            Expression<Func<T, TPropType>> keySelector, int scope = 0)
             where T : ISettings, new()
         {
             var member = keySelector.Body as MemberExpression;
@@ -478,6 +462,6 @@ namespace Zouave.Application.Settings.Impl
 
         #endregion
 
-        
+
     }
 }
