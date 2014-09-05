@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Web.Mvc;
 using Zouave.Data;
-using Zouave.Domain.Security;
+using Zouave.Dto.Security;
 using Zouave.Framework;
 using Zouave.Infrastructure;
 
@@ -31,7 +31,7 @@ namespace Zouave.Web.Framework.Security
 
             if (!DataSettingsHelper.DatabaseIsInstalled())
                 return;
-            var securitySettings = EngineContext.Current.Resolve<SecuritySettings >();
+            var securitySettings = EngineContext.Current.Resolve<SecuritySettingsDto >();
             if (securitySettings.ForceSslForAllPages)
                 //all pages are forced to be SSL no matter of the specified value
                 this.SslRequirement = SslRequirement.Yes;
