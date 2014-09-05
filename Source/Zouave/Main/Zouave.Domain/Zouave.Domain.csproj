@@ -45,11 +45,7 @@
   <ItemGroup>
     <Compile Include="BaseEntity.cs" />
     <Compile Include="Common\Address.cs" />
-    <Compile Include="Common\AddressSettings.cs" />
-    <Compile Include="Common\AdminAreaSettings.cs" />
-    <Compile Include="Common\CommonSettings.cs" />
     <Compile Include="Common\Dictionary.cs" />
-    <Compile Include="Common\FulltextSearchMode.cs" />
     <Compile Include="Common\GenericAttribute.cs" />
     <Compile Include="Configuration\ISettingRepository.cs" />
     <Compile Include="Configuration\Setting.cs" />
