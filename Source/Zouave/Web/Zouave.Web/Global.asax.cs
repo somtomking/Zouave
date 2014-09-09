@@ -63,17 +63,16 @@ namespace Zouave.Web
                 return;
 
             //ensure database is installed
-            if (!DataSettingsHelper.DatabaseIsInstalled())
-            {
-                string installUrl = string.Format("{0}install", webHelper.GetLocation());
-                if (!webHelper.GetThisPageUrl(false).StartsWith(installUrl, StringComparison.InvariantCultureIgnoreCase))
-                {
-                    this.Response.Redirect(installUrl);
-                }
-            }
+            //if (!DataSettingsHelper.DatabaseIsInstalled())
+            //{
+            //    string installUrl = string.Format("{0}install", webHelper.GetLocation());
+            //    if (!webHelper.GetThisPageUrl(false).StartsWith(installUrl, StringComparison.InvariantCultureIgnoreCase))
+            //    {
+            //        this.Response.Redirect(installUrl);
+            //    }
+            //}
 
-            if (!DataSettingsHelper.DatabaseIsInstalled())
-                return;
+            
 
             
         }
